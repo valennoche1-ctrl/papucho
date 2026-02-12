@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eternal Kingdoms - Prototipo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Eternal Kingdoms (Prototipo jugable)</h1>
+    <p>Sprint 1: ya empezamos a programar la primera misión principal.</p>
+  </header>
+
+  <main class="layout">
+    <section class="card">
+      <h2>1) Crear guerrero</h2>
+      <div class="grid">
+        <label>Nombre
+          <input id="name" type="text" value="Aldric" maxlength="20" />
+        </label>
+        <label>Género / Identidad
+          <select id="identity"></select>
+        </label>
+        <label>Pelo
+          <select id="hair"></select>
+        </label>
+        <label>Rostro y rasgos
+          <select id="face"></select>
+        </label>
+        <label>Vestimenta
+          <select id="outfit"></select>
+        </label>
+        <label>Heráldica
+          <select id="heraldry"></select>
+        </label>
+      </div>
+      <button id="createBtn">Crear personaje</button>
+      <p id="characterSummary" class="muted">Aún no has creado el personaje.</p>
+    </section>
+
+    <section class="card">
+      <h2>2) Primera misión principal</h2>
+      <p class="muted">"Limpia el Camino del Molino" (3 enemigos rango D + volver con el herrero)</p>
+      <div class="actions">
+        <button id="startMainQuestBtn">Iniciar misión principal</button>
+        <button id="fightBtn">Pelear (enemigo aleatorio)</button>
+        <button id="turnInQuestBtn">Entregar misión</button>
+      </div>
+      <p id="missionText" class="muted">Sin misión activa.</p>
+      <p id="fightLog" class="muted">Sin combate.</p>
+    </section>
+
+    <section class="card">
+      <h2>3) Estado del héroe</h2>
+      <div id="stats"></div>
+    </section>
+
+    <section class="card">
+      <h2>4) Ciudad y comerciantes (IA simulada)</h2>
+      <ul id="merchants"></ul>
+      <button id="refreshCity">Generar nueva ciudad/fortaleza</button>
+      <p id="cityInfo" class="muted"></p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
